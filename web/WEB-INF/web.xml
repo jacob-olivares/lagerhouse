@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
+    <servlet>
+        <servlet-name>ServletCargaProductos</servlet-name>
+        <servlet-class>com.lagerhouse.app.controller.ServletCargaProductos</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ServletCargaListas</servlet-name>
+        <servlet-class>com.lagerhouse.app.controller.ServletCargaListas</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ServletProducto</servlet-name>
+        <servlet-class>com.lagerhouse.app.controller.ServletProducto</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ServletCargaProductos</servlet-name>
+        <url-pattern>/ServletCargaProductos</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ServletCargaListas</servlet-name>
+        <url-pattern>/ServletCargaListas</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ServletProducto</servlet-name>
+        <url-pattern>/ServletProducto</url-pattern>
+    </servlet-mapping>
+       <servlet-mapping>
+        <servlet-name>ServletProducto</servlet-name>
+        <url-pattern>/mantenedor/producto/*</url-pattern>
+    </servlet-mapping>
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+</web-app>
